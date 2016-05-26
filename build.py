@@ -44,6 +44,8 @@ def get_config(json_data):
 def load_json():
     with open('archive.json', 'r') as archive:
         json_data = json.load(archive)
+    with open('config.json', 'r') as config:
+        json_data['config'] = json.load(config)['config']
     return json_data
 
 
@@ -194,6 +196,7 @@ def build_site(config, json_data):
 def build():
     json_data = load_json()
     config = get_config(json_data)
+    print(config)
     clear_site(config)
     update_archive(config, json_data)
     build_site(config, json_data)
