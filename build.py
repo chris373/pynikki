@@ -64,11 +64,12 @@ def clear_site(config): # remove blog files so it can be rebuilt
     for f in html_files:
         os.remove(f)
 
-def gen_post_entry(files_directory, post_file, count):
+def gen_post_entry(files_directory, post_file, count, config):
     entrydict = dict()
     entrydict['title'] = post_file
-    entrydict['publish_date'] = os.path.getmtime(
-                                files_directory + '/' + post_file)
+    t = os.path.getmtime(files_directory + '/' + post_file)
+    gmt = time.gmtime(t)
+    entrydict['publish_date'] = time.strftime(config['date_format_string'], gmt)
     entrydict['ID'] = count
     entrydict['FNAME'] = post_file
     return entrydict
@@ -110,7 +111,7 @@ def update_archive(config, json_data):
     # generate post entrys for the posts being added to the archive
     for post_file in posts_to_add:
         post_file = post_file[1] # get just the file name from the tuple
-        archive_posts.append(gen_post_entry(files_directory, post_file, count))
+        archive_posts.append(gen_post_entry(files_directory, post_file, count, config))
         count += 1
 
     # update the json_data with the updated list of posts

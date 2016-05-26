@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+
+    <link rel="stylesheet" href="../css/blog.css">
+    <!-- Highlighter 
+    <script type="text/javascript" src="js/shCore.js"></script>
+    <script type="text/javascript" src="js/shBrushPython.js"></script>
+    <script type="text/javascript" src="js/shBrushJScript.js"></script>
+    <link href="css/shCore.css" rel="stylesheet" type="text/css" />
+    <link href="css/shThemeDefault.css" rel="stylesheet" type="text/css" />-->
+
+   
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" />
+</head>
+
+<body>
+    <!--  NAV BAR -->
+    <nav class="blue darken-1">
+        <div class="nav-wrapper">
+            <a href="#" class="left brand-logo" id="logo">Blog</a>
+            <ul class="right" id="links">
+                <li><a href="#" style="font-size: 22px">About</a></li>
+                <li><a href="#" style="font-size: 22px">Projects</a></li>
+                <li><a href="#" style="font-size: 22px">Archive</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- /NAV BAR -->
+
+
+    <div class="sidebar-container-top" id="sidebar-container-top" style="display: none">
+
+    </div>
+
+
+    <div class="main-content row" id="main-content">
+        <!-- posts -->
+        <div class="" id="posts">
+
+
+
+	    
+		    <div class="post z-depth-1">
+		        <div class="post-title ">021.txt
+		            <span class="post-date right ">Wednesday, May 25 2016</span>
+		        </div>
+		        publish/021.txt
+		    </div>
+	    
+		    <div class="post z-depth-1">
+		        <div class="post-title ">022.txt
+		            <span class="post-date right ">Wednesday, May 25 2016</span>
+		        </div>
+		        publish/022.txt
+		    </div>
+	    
+		    <div class="post z-depth-1">
+		        <div class="post-title ">023.txt
+		            <span class="post-date right ">Wednesday, May 25 2016</span>
+		        </div>
+		        publish/023.txt
+		    </div>
+	    
+		    <div class="post z-depth-1">
+		        <div class="post-title ">024.txt
+		            <span class="post-date right ">Wednesday, May 25 2016</span>
+		        </div>
+		        publish/024.txt
+		    </div>
+	    
+		    <div class="post z-depth-1">
+		        <div class="post-title ">025.txt
+		            <span class="post-date right ">Wednesday, May 25 2016</span>
+		        </div>
+		        publish/025.txt
+		    </div>
+	    
+
+
+	    <!-- PAGINATION -->
+            <ul class="pagination center ">
+                <li class=" fitted-button active"><a href="0.html"><i class="material-icons ">first_page</i></a></li>
+                <li class=" fitted-button active"><a href="3.html"><i class="material-icons ">chevron_left</i></a></li>
+                <li class=" disabled"><a href="1.html">1</a></li>
+                <li class=" disabled"><a href="2.html">2</a></li>
+                <li class=" disabled"><a href="3.html">3</a></li>
+                <li class=" active"><a href="#">4</a></li>
+                <li class=" disabled"><a href="5.html">5</a></li>
+                <li class=" fitted-button active"><a href="5.html"><i class="material-icons ">chevron_right</i></a></li>
+                <li class=" fitted-button active"><a href="5.html"><i class="material-icons ">last_page</i></a></li>
+            </ul>
+            <!-- /PAGINATION -->
+        </div>
+    </div>
+
+    <script>
+        window.onload = displayWindowSize;
+        window.onresize = displayWindowSize;
+
+        function displayWindowSize() {
+
+            width = window.innerWidth;
+            //document.getElementById("where").innerHTML = "width: " + width;
+
+            if (width < 720) {
+                document.getElementById('main-content').setAttribute("style", "width: " + width.toString() + "px;");
+            } else {
+                if (document.getElementById('main-content').offsetWidth != 720)
+                    document.getElementById('main-content').setAttribute("style", "width: " + (720).toString() + "px;");
+
+                document.getElementById('links').setAttribute("style", "margin-right: " + ((width - 720) / 2.0) + "px;");
+                document.getElementById('logo').setAttribute("style", "margin-left: " + ((width - 720) / 2.0) + "px;");
+            }
+        };
+
+
+        var post_images = ["images/i1", "images/i2", "images/i3", "images/i4"];
+
+        function rotate_left() {
+            first = post_images.shift();
+            post_images.push(first);
+        }
+
+        function rotate_right() {
+            last = post_images.pop();
+            post_images.unshift(last);
+        }
+
+        function clk_left() {
+            rotate_left();
+            for (i = 1; i <= post_images.length; i++) {
+                document.getElementById("img" + i).setAttribute("src", post_images[i - 1] + ".jpg");
+            }
+        }
+
+        function clk_right() {
+            rotate_right();
+            for (i = 1; i <= post_images.length; i++) {
+                document.getElementById("img" + i).setAttribute("src", post_images[i - 1] + ".jpg");
+            }
+        }
+    </script>
+	    <!--Import jQuery before materialize.js-->
+	    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	    <!-- Compiled and minified JavaScript -->
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+</body>
+
+</html>
