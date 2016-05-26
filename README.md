@@ -31,7 +31,7 @@ The default structure looks like this:
 the default configuration looks for posts inside publish, and templates inside myblog/templates
 The configurations settings are in the config array inside the archive.json file.
 
-This project comes with some dummy posts and a simple jinja template. To try them out just run it with:
+This project comes with some dummy posts and a simple Jinja2 template. To try them out just run it with:
 ```python build.py```
 
 This will place the generated pages inside myblog/blog/<n>.html
