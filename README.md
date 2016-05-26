@@ -36,7 +36,7 @@ The default structure looks like this:
     └── ...
 ```
 
-The configurations settings are in the config array inside the archive.json file.
+The configurations settings are in the config.json file.
 the default configuration looks for posts inside publish, and for the template myblog/blog_template.html
 building the site will place the generated pages inside myblog/blog/<n>.html
 
