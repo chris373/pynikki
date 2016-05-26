@@ -1,4 +1,7 @@
 # shaberou
+
+Introduction 
+------------------
 Shaberou is a static page generator focused on helping you easily create a blog using jinja2 templates.
 Shaberou will handle pagination automatically, with no extra plugins to configure.
 
