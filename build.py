@@ -25,9 +25,12 @@ def remove_extensions(file):
 
 def write_changes(json_data):
     json_data_str = json.dumps(json_data)
+    json_config_str = json.dumps(json_data['config'])
+    with open('config.json', 'w') as f:
+        json.dump(json_data['config'], f, indent=4)
+    json_data.pop('config')
     with open('archive.json', 'w') as f:
         json.dump(json_data, f, indent=4)
-
 
 def get_config(json_data):
     config = json_data['config']
@@ -45,7 +48,7 @@ def load_json():
     with open('archive.json', 'r') as archive:
         json_data = json.load(archive)
     with open('config.json', 'r') as config:
-        json_data['config'] = json.load(config)['config']
+        json_data['config'] = json.load(config)
     return json_data
 
 
@@ -196,7 +199,6 @@ def build_site(config, json_data):
 def build():
     json_data = load_json()
     config = get_config(json_data)
-    print(config)
     clear_site(config)
     update_archive(config, json_data)
     build_site(config, json_data)

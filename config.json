@@ -1,32 +1,30 @@
-{
-	"config": [
-		{
-		    "pagination_count": "5",
-		    "type": "int"
-		},
-		{
-		    "type": "int",
-		    "pagination_button_count": "5"
-		},
-		{
-		    "type": "string",
-		    "site_path": "myblog"
-		},
-		{
-		    "type": "string",
-		    "posts_path": "publish"
-		},
-		{
-		    "type": "string",
-		    "templates_path": "templates"
-		},
-		{
-		    "type": "string",
-		    "date_format_string": ""
-		},
-		{
-		    "type": "string",
-		    "blog_template": "blog_template.html"
-		}
-    ]
-}
+[
+    {
+        "type": "int", 
+        "pagination_count": "5"
+    }, 
+    {
+        "type": "int", 
+        "pagination_button_count": "5"
+    }, 
+    {
+        "site_path": "myblog", 
+        "type": "string"
+    }, 
+    {
+        "posts_path": "publish", 
+        "type": "string"
+    }, 
+    {
+        "type": "string", 
+        "templates_path": "templates"
+    }, 
+    {
+        "date_format_string": "", 
+        "type": "string"
+    }, 
+    {
+        "blog_template": "blog_template.html", 
+        "type": "string"
+    }
+]
