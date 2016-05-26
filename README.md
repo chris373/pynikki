@@ -35,7 +35,7 @@ the default configuration looks for posts inside publish, and for the template m
 building the site will place the generated pages inside myblog/blog/<n>.html
 
 The pagination and page buttons are automatically handled for you based on settings inside config. 
-The default creates a list of buttons in the order ```[first_page, back, (n), (n+1), (n+2), (n+3), (n+4), forward, last_page]```
+The default creates a list of buttons in the order ```[first_page, back, n1 ... n5, forward, last_page]```
  
 each button is a dictionary containing page number, active, and the appropriate page link. 
 Look under ```<!-- paginate -->``` in myblog/blog_template.html to see how to access the buttons for your Jinja2 template.
