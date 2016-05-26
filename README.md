@@ -3,9 +3,11 @@ Shaberou is a static page generator focused on helping you easily create a blog 
 
 to get started first install Jinja 2.
 using pip: ```pip install Jinja2```
+This project comes with some dummy posts and a simple Jinja2 template. To try them out just run it with:
+```python build.py```
+That's all there is to it! Now the blog pages are available under myblog/blog
 
 The default structure looks like this:
-
 ```
 .
 ├── archive.json
@@ -28,18 +30,12 @@ The default structure looks like this:
     └── ...
 ```
 
-the default configuration looks for posts inside publish, and templates inside myblog/templates
 The configurations settings are in the config array inside the archive.json file.
+the default configuration looks for posts inside publish, and for the template myblog/blog_template.html
+building the site will place the generated pages inside myblog/blog/<n>.html
 
-This project comes with some dummy posts and a simple Jinja2 template. To try them out just run it with:
-```python build.py```
-
-This will place the generated pages inside myblog/blog/<n>.html
-
-The pagination and page buttons are handled for you and are automatically created for you. 
-The default is to create a first and last page button, and back and forward buttons.
-These get passed into the jinja2 template as list of buttons. 
-the buttons have their page number, active, and the appropriate link. 
-
-Look under ```<!-- paginate -->``` to see how the buttons are accessed.
-
+The pagination and page buttons are automatically handled for you based on settings inside config. 
+The default creates a list of buttons in the order ```[first_page, back, (n), (n+1), (n+2), (n+3), (n+4), forward, last_page]```
+ 
+each button is a dictionary containing page number, active, and the appropriate page link. 
+Look under ```<!-- paginate -->``` in myblog/blog_template.html to see how to access the buttons for your Jinja2 template.
