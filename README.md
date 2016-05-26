@@ -1,16 +1,18 @@
 # shaberou
 
-Introduction 
-------------------
 Shaberou is a static page generator focused on helping you easily create a blog using jinja2 templates.
 Shaberou will handle pagination automatically, with no extra plugins to configure.
 
+Installation
+---------------
 to get started first install Jinja 2.
 using pip: ```pip install Jinja2```
 This project comes with some dummy posts and a simple Jinja2 template. To try them out just run it with:
 ```python build.py```
 That's all there is to it! Now the blog pages are available under myblog/blog
 
+Overview
+--------------
 The default structure looks like this:
 ```
 .
