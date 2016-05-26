@@ -1,0 +1,110 @@
+.banner {
+    width: 100%;
+}
+
+body {
+    background-color: #ffffff;
+    font-family: sans-serif;
+}
+
+.main-content {
+    width: 720px;
+    padding-top: 30px;
+    position: relative;
+}
+
+.posts {}
+
+.post {
+    border-radius: 5px;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.post-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #3d3d3d;
+    border-bottom: 3px solid #6e6e6e;
+}
+
+.post-date {
+    margin-top: 4px;
+    font-size: 14px !important;
+    color: #b5b5b5;
+}
+
+.post-content {
+    padding-top: 20px;
+}
+
+.images {
+    width: 100%;
+}
+
+.imcon {
+    width: 33%;
+    float: left;
+    padding: 5px;
+}
+
+.imcon-bg {
+    width: 100%;
+    padding: 5px;
+    position: relative;
+}
+
+.im {
+    width: 100%;
+}
+
+.lr {
+    position: absolute;
+    top: 50%;
+    bottom: auto;
+    border: none;
+    background-color: rgba(34, 34, 34, 0.20);
+}
+
+.lr:hover {
+    background-color: rgba(34, 34, 34, 0.20);
+}
+
+.lr:focus {
+    background-color: rgba(34, 34, 34, 0.20);
+}
+
+.lr:active {
+    background-color: rgba(34, 34, 34, 0.20);
+}
+
+.lbtn {
+    left: -2%;
+}
+
+.rbtn {
+    right: -2%;
+}
+
+.syntaxhighlighter {
+    font-size: 12px !important;
+}
+
+.fitted-button {
+    margin: 0px !important;
+    padding: 0px !important;
+}
+
+.sidebar-content {}
+
+.sidebar {
+    position: absolute;
+    width: 200px;
+    left: -220px;
+    top: 0px;
+}
+
+.sidebar-content {
+    top: 0px;
+    left: 0px;
+}

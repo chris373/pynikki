@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+
+    <link rel="stylesheet" href="../css/blog.css">
+    <!-- Highlighter 
+    <script type="text/javascript" src="js/shCore.js"></script>
+    <script type="text/javascript" src="js/shBrushPython.js"></script>
+    <script type="text/javascript" src="js/shBrushJScript.js"></script>
+    <link href="css/shCore.css" rel="stylesheet" type="text/css" />
+    <link href="css/shThemeDefault.css" rel="stylesheet" type="text/css" />-->
+
+   
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" />
+</head>
+
+<body>
+    <!--  NAV BAR -->
+    <nav class="blue darken-1">
+        <div class="nav-wrapper">
+            <a href="#" class="left brand-logo" id="logo">Blog</a>
+            <ul class="right" id="links">
+                <li><a href="#" style="font-size: 22px">About</a></li>
+                <li><a href="#" style="font-size: 22px">Projects</a></li>
+                <li><a href="#" style="font-size: 22px">Archive</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- /NAV BAR -->
+
+
+    <div class="sidebar-container-top" id="sidebar-container-top" style="display: none">
+
+    </div>
+
+
+    <div class="main-content row" id="main-content">
+        <!-- posts -->
+        <div class="" id="posts">
+
+
+
+	    {% for post in posts %}
+		    <div class="post z-depth-1">
+		        <div class="post-title ">{{ post['title'] }}
+		            <span class="post-date right ">{{ post['publish_date'] }}</span>
+		        </div>
+		        {{ post['content'] }}
+		    </div>
+	    {% endfor %}
+
+
+	    <!-- PAGINATION -->
+            <ul class="pagination center ">
+                <li class=" fitted-button {{ buttons[0]['active'] }}"><a href="{{ buttons[0]['link'] }}"><i class="material-icons ">first_page</i></a></li>
+                <li class=" fitted-button {{ buttons[1]['active'] }}"><a href="{{ buttons[1]['link'] }}"><i class="material-icons ">chevron_left</i></a></li>
+                <li class=" {{ buttons[2]['active'] }}"><a href="{{ buttons[2]['link'] }}">{{ buttons[2]['number'] }}</a></li>
+                <li class=" {{ buttons[3]['active'] }}"><a href="{{ buttons[3]['link'] }}">{{ buttons[3]['number'] }}</a></li>
+                <li class=" {{ buttons[4]['active'] }}"><a href="{{ buttons[4]['link'] }}">{{ buttons[4]['number'] }}</a></li>
+                <li class=" {{ buttons[5]['active'] }}"><a href="{{ buttons[5]['link'] }}">{{ buttons[5]['number'] }}</a></li>
+                <li class=" {{ buttons[6]['active'] }}"><a href="{{ buttons[6]['link'] }}">{{ buttons[6]['number'] }}</a></li>
+                <li class=" fitted-button {{ buttons[7]['active'] }}"><a href="{{ buttons[7]['link'] }}"><i class="material-icons ">chevron_right</i></a></li>
+                <li class=" fitted-button {{ buttons[8]['active'] }}"><a href="{{ buttons[8]['link'] }}"><i class="material-icons ">last_page</i></a></li>
+            </ul>
+            <!-- /PAGINATION -->
+        </div>
+    </div>
+
+    <script>
+        window.onload = displayWindowSize;
+        window.onresize = displayWindowSize;
+
+        function displayWindowSize() {
+
+            width = window.innerWidth;
+            //document.getElementById("where").innerHTML = "width: " + width;
+
+            if (width < 720) {
+                document.getElementById('main-content').setAttribute("style", "width: " + width.toString() + "px;");
+            } else {
+                if (document.getElementById('main-content').offsetWidth != 720)
+                    document.getElementById('main-content').setAttribute("style", "width: " + (720).toString() + "px;");
+
+                document.getElementById('links').setAttribute("style", "margin-right: " + ((width - 720) / 2.0) + "px;");
+                document.getElementById('logo').setAttribute("style", "margin-left: " + ((width - 720) / 2.0) + "px;");
+            }
+        };
+
+
+        var post_images = ["images/i1", "images/i2", "images/i3", "images/i4"];
+
+        function rotate_left() {
+            first = post_images.shift();
+            post_images.push(first);
+        }
+
+        function rotate_right() {
+            last = post_images.pop();
+            post_images.unshift(last);
+        }
+
+        function clk_left() {
+            rotate_left();
+            for (i = 1; i <= post_images.length; i++) {
+                document.getElementById("img" + i).setAttribute("src", post_images[i - 1] + ".jpg");
+            }
+        }
+
+        function clk_right() {
+            rotate_right();
+            for (i = 1; i <= post_images.length; i++) {
+                document.getElementById("img" + i).setAttribute("src", post_images[i - 1] + ".jpg");
+            }
+        }
+    </script>
+	    <!--Import jQuery before materialize.js-->
+	    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	    <!-- Compiled and minified JavaScript -->
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+</body>
+
+</html>
