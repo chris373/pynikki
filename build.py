@@ -141,10 +141,10 @@ def get_buttons(cur_page, post_count, config):
     button_dicts = []
     for button in buttons:
         if button == cur_page:
-            button_dicts.append({'active': 'active', 'number': str(cur_page),
+            button_dicts.append({'active': 'disabled', 'number': str(cur_page),
                                 'link': '#'})
         else:
-            button_dicts.append({'active': 'disabled', 'number': str(button),
+            button_dicts.append({'active': 'active', 'number': str(button),
                                 'link': str(button) + '.html'})
 
     # add first, back, forward, last
@@ -172,6 +172,7 @@ def get_buttons(cur_page, post_count, config):
     button_dicts.insert(0, {'active': first_back_active, 'link': first_link })
     button_dicts.append({'active': last_forward_active, 'link': forward_link })
     button_dicts.append({'active': last_forward_active, 'link': last_link })
+    print(button_dicts)
 
     return button_dicts
 
