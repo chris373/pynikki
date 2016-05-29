@@ -36,12 +36,12 @@ The default structure looks like this:
     └── ...
 ```
 
-The configurations settings are in the config array inside the archive.json file.
+The configurations settings are in the config array inside the config.json file.
 the default configuration looks for posts inside publish, and for the template myblog/blog_template.html
 building the site will place the generated pages inside myblog/blog/<n>.html
 
 The pagination and page buttons are automatically handled for you based on settings inside config. 
 The default creates a list of buttons in the order ```[first_page, back, n1, n2, n3, n4, n5, forward, last_page]```
  
-each button is a dictionary containing page number, active, and the appropriate page link. 
+each button is a dictionary containing page number, whether or not it is active active, and the appropriate page link. 
 Look under ```<!-- paginate -->``` in myblog/blog_template.html to see how to access the buttons for your Jinja2 template.
