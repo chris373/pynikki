@@ -107,6 +107,8 @@ def update_archive(config, json_data):
         mtime = os.path.getmtime(config['posts_path'] + '/' + add_post)
         posts_to_add[i] = (mtime, add_post)
     posts_to_add = sorted(posts_to_add, key=lambda add_post: add_post[0])
+    # posts need to be displayed in reverse chronological order so reverse them.
+    posts_to_add = reversed(posts_to_add)
 
     # generate post entrys for the posts being added to the archive
     for post_file in posts_to_add:
