@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../css/blog.css">
+
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" />
+</head>
+
+<body>
+    <!-- /NAV BAR -->
+    <div class="myNavWrapper">
+        <div class="myNav">
+            <div class="myNav-l"><a href="#">Blog</a></div>
+            <div class="myNav-r">
+                <a href="About.html">About</a>
+                <a href="Projects.html">Projects</a>
+                <a href="Archive.html">Achive</a>
+            </div>
+        </div>
+    </div>
+    <!-- /NAV BAR -->
+
+
+    {% for post in posts %}
+    <div class="myArchiveBox">
+        <div class="myArchiveBoxTop">
+            <div class="myBoxTitle">{{ post['title'] }}</div>
+            <div class="myBoxDate">{{ post['publish_date'] }}</div>
+        </div>
+    </div>
+    {% endfor %}
+
+    <!-- PAGINATION -->
+    <div class="pagination">
+        <ul>
+            <li><a class="{{ buttons[0]['active'] }}" href="{{ buttons[0]['link'] }}"><i class="material-icons">first_page</i></a></li>
+            <li><a class="{{ buttons[1]['active'] }}" href="{{ buttons[1]['link'] }}"><i class="material-icons">chevron_left</i></a></li>
+            <li><a class="num {{ buttons[2]['active'] }}" href="{{ buttons[2]['link'] }}">{{ buttons[2]['number'] }}</a></li>
+            <li><a class="num {{ buttons[3]['active'] }}" href="{{ buttons[3]['link'] }}">{{ buttons[3]['number'] }}</a></li>
+            <li><a class="num {{ buttons[4]['active'] }}" href="{{ buttons[4]['link'] }}">{{ buttons[4]['number'] }}</a></li>
+            <li><a class="num {{ buttons[5]['active'] }}" href="{{ buttons[5]['link'] }}">{{ buttons[5]['number'] }}</a></li>
+            <li><a class="num {{ buttons[6]['active'] }}" href="{{ buttons[6]['link'] }}">{{ buttons[6]['number'] }}</a></li>
+            <li><a class="{{ buttons[7]['active'] }}" href="{{ buttons[7]['link'] }}"><i class="material-icons">chevron_right</i></a></li>
+            <li><a class="{{ buttons[8]['active'] }}" href="{{ buttons[8]['link'] }}"><i class="material-icons">last_page</i></a></li>
+        </ul>
+    </div>
+    <!-- /PAGINATION -->
+
+
+    <!-- /NAV BAR -->
+    <div class="footer">
+    </div>
+    <!-- /NAV BAR -->
+
+</body>
+
+</html>
