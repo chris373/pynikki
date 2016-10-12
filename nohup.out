@@ -1,0 +1,74 @@
+Serving HTTP on 0.0.0.0 port 8000 ...
+
+Keyboard interrupt received, exiting.
+Serving HTTP on 0.0.0.0 port 8000 ...
+
+Keyboard interrupt received, exiting.
+127.0.0.1 - - [12/Oct/2016 11:19:11] "GET /myblog/about.html HTTP/1.1" 200 -
+127.0.0.1 - - [12/Oct/2016 11:19:11] "GET /css/blog.css HTTP/1.1" 200 -
+127.0.0.1 - - [12/Oct/2016 11:19:12] "GET /myblog/about.html HTTP/1.1" 200 -
+127.0.0.1 - - [12/Oct/2016 11:19:12] "GET /css/blog.css HTTP/1.1" 200 -
+127.0.0.1 - - [12/Oct/2016 11:19:12] "GET /myblog/about.html HTTP/1.1" 200 -
+127.0.0.1 - - [12/Oct/2016 11:19:12] "GET /css/blog.css HTTP/1.1" 200 -
+127.0.0.1 - - [12/Oct/2016 11:19:12] "GET /myblog/about.html HTTP/1.1" 200 -
+127.0.0.1 - - [12/Oct/2016 11:19:12] "GET /css/blog.css HTTP/1.1" 200 -
+127.0.0.1 - - [12/Oct/2016 11:19:13] "GET /myblog/about.html HTTP/1.1" 200 -
+127.0.0.1 - - [12/Oct/2016 11:19:13] "GET /css/blog.css HTTP/1.1" 200 -
+127.0.0.1 - - [12/Oct/2016 11:19:13] "GET /myblog/about.html HTTP/1.1" 200 -
+127.0.0.1 - - [12/Oct/2016 11:19:13] "GET /css/blog.css HTTP/1.1" 200 -
+127.0.0.1 - - [12/Oct/2016 11:19:14] "GET /myblog/about.html HTTP/1.1" 200 -
+127.0.0.1 - - [12/Oct/2016 11:19:14] "GET /css/blog.css HTTP/1.1" 200 -
+127.0.0.1 - - [12/Oct/2016 11:19:17] code 404, message File not found
+127.0.0.1 - - [12/Oct/2016 11:19:17] "GET /myblog/Archive.html HTTP/1.1" 404 -
+127.0.0.1 - - [12/Oct/2016 11:19:20] "GET /myblog/blog/0.html HTTP/1.1" 200 -
+127.0.0.1 - - [12/Oct/2016 11:19:20] "GET /myblog/css/blog.css HTTP/1.1" 200 -
+127.0.0.1 - - [12/Oct/2016 11:19:22] code 404, message File not found
+127.0.0.1 - - [12/Oct/2016 11:19:22] "GET /myblog/Archive.html HTTP/1.1" 404 -
+127.0.0.1 - - [12/Oct/2016 11:19:26] "GET /myblog/archive/0.html HTTP/1.1" 200 -
+Serving HTTP on 0.0.0.0 port 8000 ...
+
+Keyboard interrupt received, exiting.
+127.0.0.1 - - [12/Oct/2016 11:20:19] "GET /myblog/about.html HTTP/1.1" 200 -
+127.0.0.1 - - [12/Oct/2016 11:20:19] "GET /css/blog.css HTTP/1.1" 200 -
+127.0.0.1 - - [12/Oct/2016 11:20:19] "GET /myblog/about.html HTTP/1.1" 200 -
+127.0.0.1 - - [12/Oct/2016 11:20:19] "GET /css/blog.css HTTP/1.1" 200 -
+127.0.0.1 - - [12/Oct/2016 11:20:19] "GET /myblog/about.html HTTP/1.1" 200 -
+127.0.0.1 - - [12/Oct/2016 11:20:19] "GET /css/blog.css HTTP/1.1" 200 -
+127.0.0.1 - - [12/Oct/2016 11:20:21] "GET /myblog/about.html HTTP/1.1" 200 -
+127.0.0.1 - - [12/Oct/2016 11:20:21] "GET /css/blog.css HTTP/1.1" 200 -
+127.0.0.1 - - [12/Oct/2016 11:20:23] code 404, message File not found
+127.0.0.1 - - [12/Oct/2016 11:20:23] "GET /myblog/Archive.html HTTP/1.1" 404 -
+127.0.0.1 - - [12/Oct/2016 11:20:27] code 404, message File not found
+127.0.0.1 - - [12/Oct/2016 11:20:27] "GET /myblog/Archive.html HTTP/1.1" 404 -
+Serving HTTP on 0.0.0.0 port 8000 ...
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 57166)
+----------------------------------------
+
+Keyboard interrupt received, exiting.
+127.0.0.1 - - [12/Oct/2016 11:21:31] "GET /myblog/about.html HTTP/1.1" 200 -
+127.0.0.1 - - [12/Oct/2016 11:21:31] "GET /css/blog.css HTTP/1.1" 200 -
+127.0.0.1 - - [12/Oct/2016 11:21:32] "GET /myblog/archive/0.html HTTP/1.1" 200 -
+127.0.0.1 - - [12/Oct/2016 11:21:33] "GET /myblog/blog/0.html HTTP/1.1" 200 -
+127.0.0.1 - - [12/Oct/2016 11:21:34] "GET /myblog/archive/0.html HTTP/1.1" 200 -
+127.0.0.1 - - [12/Oct/2016 11:21:35] "GET /myblog/blog/0.html HTTP/1.1" 200 -
+127.0.0.1 - - [12/Oct/2016 11:21:36] "GET /myblog/about.html HTTP/1.1" 200 -
+127.0.0.1 - - [12/Oct/2016 11:21:38] "GET /myblog/archive/0.html HTTP/1.1" 200 -
+127.0.0.1 - - [12/Oct/2016 11:21:39] "GET /myblog/blog/0.html HTTP/1.1" 200 -
+127.0.0.1 - - [12/Oct/2016 11:21:40] "GET /myblog/archive/0.html HTTP/1.1" 200 -
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/socketserver.py", line 313, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.5/socketserver.py", line 341, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.5/socketserver.py", line 354, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.5/socketserver.py", line 681, in __init__
+    self.handle()
+  File "/usr/lib/python3.5/http/server.py", line 422, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.5/http/server.py", line 390, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib/python3.5/socket.py", line 575, in readinto
+    return self._sock.recv_into(b)
+KeyboardInterrupt
