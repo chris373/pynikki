@@ -1,7 +1,7 @@
-# Shaberou
+# Pynikki
 
-Shaberou is a static page generator focused on helping you easily create a blog using jinja2 templates.
-Shaberou will handle pagination automatically, with no extra plugins to configure.
+pynikki is a static page generator focused on helping you easily create a blog using jinja2 templates.
+pynikki will handle pagination automatically, with no extra plugins to configure.
 
 Installation
 ---------------
@@ -36,7 +36,7 @@ The default structure looks like this:
     └── ...
 ```
 
-The configurations settings are in the config array inside the config.json file.
+The configurations settings are inside the config.json file.
 the default configuration looks for posts inside publish, and for the template myblog/blog_template.html
 building the site will place the generated pages inside myblog/blog/<n>.html
 
