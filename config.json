@@ -1,12 +1,42 @@
-{
-    "archive_template": "archive_template.html",
-    "posts_path": "publish",
-    "blog_template": "blog_template.html",
-    "archive_pagination_button_count": "5",
-    "archive_pagination_count": "10",
-    "pagination_button_count": "5",
-    "site_path": "myblog",
-    "templates_path": "templates",
-    "date_format_string": "%A, %B %d %Y",
-    "blog_pagination_count": "5"
-}
+[
+    {
+        "type": "int",
+        "archive_pagination_count": "10"
+    },
+    {
+        "type": "int",
+        "archive_pagination_button_count": "5"
+    },
+    {
+        "type": "int",
+        "pagination_count": "5"
+    },
+    {
+        "type": "int",
+        "pagination_button_count": "5"
+    },
+    {
+        "type": "string",
+        "site_path": "myblog"
+    },
+    {
+        "type": "string",
+        "posts_path": "publish"
+    },
+    {
+        "templates_path": "templates",
+        "type": "string"
+    },
+    {
+        "type": "string",
+        "date_format_string": "%A, %B %d %Y"
+    },
+    {
+        "type": "string",
+        "archive_template": "archive_template.html"
+    },
+    {
+        "type": "string",
+        "blog_template": "blog_template.html"
+    }
+]
