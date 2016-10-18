@@ -1,6 +1,8 @@
 # Pynikki
 
-pynikki is a static page generator focused on helping you easily create a blog using jinja2 templates.
+pynikki is a static page generator focused on helping you easily create a blog using jinja2 templates for the layout and markdown to create your posts.
+I use pynikki to publish my blog at [chris373.github.io](chris373.github.io)
+
 pynikki will handle pagination automatically, with no extra plugins to configure.
 
 Installation
