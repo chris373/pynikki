@@ -7,6 +7,7 @@ from jinja2 import Environment, PackageLoader
 import json
 import time
 import copy
+import markdown
 
 def cast(value, cast_type):
     if cast_type == 'int':
@@ -19,7 +20,6 @@ def cast(value, cast_type):
 
 def get_extension(file):
     return file.split('.')[-1]
-
 
 def remove_extensions(file):
     return '.'.join(file.split('.')[:-1])
@@ -102,6 +102,7 @@ def update_archive(config, json_data):
     for i, add_post in enumerate(posts_to_add):
         mtime = os.path.getmtime(config['posts_path'] + '/' + add_post)
         posts_to_add[i] = (mtime, add_post)
+
     posts_to_add = sorted(posts_to_add, key=lambda add_post: add_post[0])
     # posts need to be displayed in reverse chronological order so reverse them.
     posts_to_add = reversed(posts_to_add)
@@ -214,7 +215,7 @@ def build_site(config, json_data):
     count = len(posts)
     for i in range(0, count):
         post = posts[i]
-        post['content'] = load_content(config, post['FNAME'])
+        post['content'] = markdown.markdown(load_content(config, post['FNAME']), extensions=['markdown.extensions.fenced_code'])
         # only show one post per page, so pass 1 as pagination_count
         buttons = get_buttons(i, count, 1, config['pagination_button_count'])
         # render the current page

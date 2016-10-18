@@ -1,19 +1,19 @@
 [
     {
-        "archive_pagination_count": "10",
-        "type": "int"
+        "type": "int",
+        "archive_pagination_count": "10"
     },
     {
-        "archive_pagination_button_count": "5",
-        "type": "int"
+        "type": "int",
+        "archive_pagination_button_count": "5"
     },
     {
-        "pagination_count": "5",
-        "type": "int"
+        "type": "int",
+        "pagination_count": "5"
     },
     {
-        "pagination_button_count": "5",
-        "type": "int"
+        "type": "int",
+        "pagination_button_count": "5"
     },
     {
         "site_path": "myblog",
@@ -28,12 +28,12 @@
         "type": "string"
     },
     {
-        "date_format_string": "%A, %B %d %Y",
-        "type": "string"
+        "type": "string",
+        "date_format_string": "%A, %B %d %Y"
     },
     {
-        "archive_template": "archive_template.html",
-        "type": "string"
+        "type": "string",
+        "archive_template": "archive_template.html"
     },
     {
         "blog_template": "blog_template.html",
