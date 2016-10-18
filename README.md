@@ -9,6 +9,9 @@ Installation
 ---------------
 to get started first install Jinja 2.
 using pip: ```pip install Jinja2```
+This project also requires markdown. You install it the same way.
+```pip install markdown```
+
 This project comes with some dummy posts and a simple Jinja2 template. To try them out just run it with:
 ```python build.py```
 That's all there is to it! Now the blog pages are available under myblog/blog
